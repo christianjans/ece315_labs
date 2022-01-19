@@ -12,7 +12,7 @@ targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo
 ps7_init
 ps7_post_config
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
-dow C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk/helloworld/Debug/helloworld.elf
+dow C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk/gpio_leds/Debug/gpio_leds.elf
 configparams force-mem-access 0
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
 con

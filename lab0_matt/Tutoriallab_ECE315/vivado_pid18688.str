@@ -218,3 +218,5 @@ dismissDialog("Launch SDK"); // aa (cl)
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk -hwspec C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
 // HMemoryUtils.trashcanNow. Engine heap size: 846 MB. GUI used memory: 65 MB. Current time: 1/19/22, 3:14:39 PM MST
 // [Engine Memory]: 846 MB (+8410kb) [00:06:46]
+// HMemoryUtils.trashcanNow. Engine heap size: 846 MB. GUI used memory: 65 MB. Current time: 1/19/22, 3:44:39 PM MST
+// HMemoryUtils.trashcanNow. Engine heap size: 846 MB. GUI used memory: 61 MB. Current time: 1/19/22, 4:14:39 PM MST
