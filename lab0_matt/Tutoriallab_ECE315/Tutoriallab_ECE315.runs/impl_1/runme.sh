@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315/Tutoriallab_ECE315.runs/impl_1'
+HD_PWD='C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -2,12 +2,21 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Jan 13 23:09:52 2021
-# Process ID: 20256
-# Current directory: C:/Users/bfcoc/OneDrive/Desktop/Shyama Gandhi/ECE_315_WINTER2021/Tutorial_lab_0/Tutoriallab_ECE315
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37212 C:\Users\bfcoc\OneDrive\Desktop\Shyama Gandhi\ECE_315_WINTER2021\Tutorial_lab_0\Tutoriallab_ECE315\Tutoriallab_ECE315.xpr
-# Log file: C:/Users/bfcoc/OneDrive/Desktop/Shyama Gandhi/ECE_315_WINTER2021/Tutorial_lab_0/Tutoriallab_ECE315/vivado.log
-# Journal file: C:/Users/bfcoc/OneDrive/Desktop/Shyama Gandhi/ECE_315_WINTER2021/Tutorial_lab_0/Tutoriallab_ECE315\vivado.jou
+# Start of session at: Wed Jan 19 15:07:52 2022
+# Process ID: 18688
+# Current directory: C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2208 C:\Users\Matt\Desktop\ece315_labs\lab0_matt\Tutoriallab_ECE315\Tutoriallab_ECE315.xpr
+# Log file: C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/vivado.log
+# Journal file: C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/bfcoc/OneDrive/Desktop/Shyama Gandhi/ECE_315_WINTER2021/Tutorial_lab_0/Tutoriallab_ECE315/Tutoriallab_ECE315.xpr}
+open_project C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file mkdir C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk
+file copy -force C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.runs/impl_1/design_1_wrapper.sysdef C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk -hwspec C:/Users/Matt/Desktop/ece315_labs/lab0_matt/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk/design_1_wrapper.hdf
