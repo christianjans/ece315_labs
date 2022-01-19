@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jan 13 22:36:46 2021
+# Process ID: 56484
+# Current directory: C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35000 C:\Users\bfcoc\Downloads\Tutoriallab_ECE315\Tutoriallab_ECE315\Tutoriallab_ECE315.xpr
+# Log file: C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315/vivado.log
+# Journal file: C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315/Tutoriallab_ECE315.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315/Tutoriallab_ECE315.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315/Tutoriallab_ECE315.runs/impl_1/design_1_wrapper.sysdef C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk -hwspec C:/Users/bfcoc/Downloads/Tutoriallab_ECE315/Tutoriallab_ECE315/Tutoriallab_ECE315.sdk/design_1_wrapper.hdf
