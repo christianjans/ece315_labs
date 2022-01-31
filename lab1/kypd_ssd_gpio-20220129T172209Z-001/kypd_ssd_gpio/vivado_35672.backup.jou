@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Jan 29 10:37:50 2022
+# Process ID: 35672
+# Current directory: C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31592 C:\Users\bfcoc\Downloads\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.xpr
+# Log file: C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/vivado.log
+# Journal file: C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.runs/impl_1/design_1_wrapper.sysdef C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk -hwspec C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper.hdf
