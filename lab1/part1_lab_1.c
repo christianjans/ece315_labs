@@ -194,7 +194,7 @@ static void prvTxTask( void *pvParameters )
 	  	  /********************************************************************************/
 	  	  // write the 3 lines of code required to display the previous key on LEFT SSD.
 	  	  // Hint: Use the similar logic of current key in order to display the previous key on LEFT SSD.
-				XGpio_DiscreteWrite(&SSDInit, 1, 0b10000000);
+				XGpio_DiscreteWrite(&SSDInit, 1, 0b00000000);
 				ssd_value = SSD_decode(previous_key, 1);
 				XGpio_DiscreteWrite(&SSDInit, 1, ssd_value);
 	  	  /********************************************************************************/
