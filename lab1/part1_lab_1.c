@@ -95,7 +95,7 @@ u32 SSD_decode(u8 key_value, u8 cathode){
 	/**********************************/
 	//  Include the remaining cases of 6-F and default case here.....
 	/**********************************/
-	case 54: if(cathode==0) return 0b01111100; else return 0b11111100;
+	case 54: if(cathode==0) return 0b01111101; else return 0b11111101;
 	case 55: if(cathode==0) return 0b00000111; else return 0b10000111;
 	case 56: if(cathode==0) return 0b01111111; else return 0b11111111;
 	case 57: if(cathode==0) return 0b01100111; else return 0b11100111;
