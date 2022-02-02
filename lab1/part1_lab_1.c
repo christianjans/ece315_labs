@@ -95,6 +95,17 @@ u32 SSD_decode(u8 key_value, u8 cathode){
 	/**********************************/
 	//  Include the remaining cases of 6-F and default case here.....
 	/**********************************/
+	case 54: if(cathode==0) return 0b01111100; else return 0b11111100;
+	case 55: if(cathode==0) return 0b00000111; else return 0b10000111;
+	case 56: if(cathode==0) return 0b01111111; else return 0b11111111;
+	case 57: if(cathode==0) return 0b01100111; else return 0b11100111;
+	case 65: if(cathode==0) return 0b01110111; else return 0b11110111;
+	case 66: if(cathode==0) return 0b01111100; else return 0b11111100;
+	case 67: if(cathode==0) return 0b00111001; else return 0b10111001;
+	case 68: if(cathode==0) return 0b01011110; else return 0b11011110;
+	case 69: if(cathode==0) return 0b01111001; else return 0b11111001;
+	case 70: if(cathode==0) return 0b01110001; else return 0b11110001;
+	default: if(cathode==0) return 0b00000000; else return 0b10000000;
 
 	}
 }
@@ -113,7 +124,7 @@ int main (void)
 
   /**********************************/
   // Set SSD GPIO direction to output here... (YOU MAY GET AND IDEA ON HOW TO DO THIS FROM LAB_0)
-
+	XGpio_SetDataDirection(&SSDInst, 1, 0x00);
   /**********************************/
 
   xil_printf("Initialization Complete, System Ready!\n");
@@ -183,6 +194,9 @@ static void prvTxTask( void *pvParameters )
 	  	  /********************************************************************************/
 	  	  // write the 3 lines of code required to display the previous key on LEFT SSD.
 	  	  // Hint: Use the similar logic of current key in order to display the previous key on LEFT SSD.
+				XGpio_DiscreteWrite(&SSDInit, 1, 0b10000000);
+				ssd_value = SSD_decode(previous_key, 1);
+				XGpio_DiscreteWrite(&SSDInit, 1, ssd_value);
 	  	  /********************************************************************************/
 
 	      //AFTER WRITING THE ABOVE GPIO functions for both SSD segments, increase or decrease the time/frequency and see the frequency where both segments appear to lit up simultaneously
