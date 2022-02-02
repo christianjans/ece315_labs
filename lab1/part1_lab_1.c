@@ -189,7 +189,7 @@ static void prvTxTask( void *pvParameters )
 	      ssd_value = SSD_decode(current_key, 0);		//this function will decode the ASCII value obtained from keypad into the corresponding HEX value for display on SSD
 	      XGpio_DiscreteWrite(&SSDInst, 1, ssd_value);	// The GPIO function to write the value obtained from the above function on RIGHT SSD
 
-	  	  vTaskDelay(pdMS_TO_TICKS(100));
+	  	  vTaskDelay(pdMS_TO_TICKS(15));
 
 	  	  /********************************************************************************/
 	  	  // write the 3 lines of code required to display the previous key on LEFT SSD.
@@ -201,7 +201,7 @@ static void prvTxTask( void *pvParameters )
 
 	      //AFTER WRITING THE ABOVE GPIO functions for both SSD segments, increase or decrease the time/frequency and see the frequency where both segments appear to lit up simultaneously
 	  	  // in other words, the digit don't blink anymore now!!!
-	  	  vTaskDelay(pdMS_TO_TICKS(100));
+	  	  vTaskDelay(pdMS_TO_TICKS(15));
 	   }
 	}
 }
