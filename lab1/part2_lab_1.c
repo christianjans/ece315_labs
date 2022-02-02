@@ -217,7 +217,7 @@ static void prvTxTask( void *pvParameters )
 						 //Length of queue=2, hence we only store the key pressed value in queue, when 'E' will be pressed.
 						 //here you write the Queue function to store the value of the last key pressed before 'E'
 						 //hint: a variable is being used in this task that keeps the track of this key value (key presses before 'E')
-						 xQueueSendToBack(xQueue, &store_word, 0U);
+						 xQueueSendToBack(xQueue, &store_key, 0U);
 						 /****************************************/
 					}
 				 }
