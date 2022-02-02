@@ -107,7 +107,8 @@ int main (void)
 
   /*************************************/
   //Set the directions of the buttons and SSD GPIO peripherals here
-
+	XGpio_SetDataDirection(&BTNInst, 1, 0x00);
+	XGpio_SetDataDirection(&SSDInst, 1, 0x00);
   /*************************************/
 
   xil_printf("Initialization Complete, System Ready!\n");
@@ -167,6 +168,7 @@ static void prvTxTask( void *pvParameters )
 		   /*******************************************/
 		   //write one line of code to capture the state of each key here. Hint: use the keystate variable to store the output
 		   //Examine the function KYPD_getKeyStates() to implement it.
+			 keystate = KYPD_getKeyStates(&myDevice);
 		   /*******************************************/
 
 	      // Determine which single key is pressed, if any
@@ -177,6 +179,7 @@ static void prvTxTask( void *pvParameters )
 	    	  /*********************************/
 	    	  // enter the function to dynamically change the priority when queue is full. This way when the queue is full here, we change the priority of this task.
 	    	  // and hence queue will be read in the receive task to perform the operation. If you change the priority here dynamically, make sure in the receive task to do the counter part!!!
+					vTaskPrioritySet(NULL, tskIDLE_PRIORITY);
 	    	  /*********************************/
 
 	      }
@@ -192,8 +195,12 @@ static void prvTxTask( void *pvParameters )
 				 //write the code to consider these key presses as invalid (use if condition) and prompt a message to user in this case
 				 //write the required code inside the "if" black box given below!!!
 				 /***************************************/
-				 if(){
-
+				 if((char) key == 'A' ||
+				 		(char) key == 'B' ||
+						(char) key == 'C' ||
+						(char) key == 'D' ||
+						(char) key == 'F'){
+					 xil_printf("Invalid input: '%c'", (char) key);
 				 }
 				 //case when we consider input key strokes from '0' to '9' (only these are the valid key inputs for arithmetic operation)
 				 else if((char)key != 'E' ){
@@ -210,6 +217,7 @@ static void prvTxTask( void *pvParameters )
 						 //Length of queue=2, hence we only store the key pressed value in queue, when 'E' will be pressed.
 						 //here you write the Queue function to store the value of the last key pressed before 'E'
 						 //hint: a variable is being used in this task that keeps the track of this key value (key presses before 'E')
+						 xQueueSendToBack(xQueue, &store_word, 0U);
 						 /****************************************/
 					}
 				 }
@@ -238,6 +246,8 @@ static void prvRxTask( void *pvParameters )
 		/***************************************/
 		//write the code to read the queue values which store two operands for the calculation here.
 		//You may use store_operands[] for doing that or your wish of variable can be used too.
+		xQueueReceive(xQueue, &store_operands[0], 0U);
+		xQueueReceive(xQueue, &store_operands[1], 0U);
 		/***************************************/
 
 
@@ -256,6 +266,10 @@ static void prvRxTask( void *pvParameters )
 		//you may also use the default case to display nothing or some prompt message saying that no operation selected by user.
 		//in the case when no operation is selected, exit this task and go back to the TxTask if you want.
 		//you may also wait here until the user selects any operation, later on perform the calculation and then go to the TxTask.
+		case 2: result = store_operands[0] | store_operands[1]; break;
+		case 4: result = store_operands[0] & store_operands[1]; break;
+		case 8: result = store_operands[0] % store_operands[1]; break;
+		default: vTaskPrioritySet(xTxTask, uxPriority + 1); break;  // Go back to TxTask.
 		/*****************************************************************************************/
 
 		}
@@ -285,6 +299,15 @@ static void prvRxTask( void *pvParameters )
 		//for two digits, first a right segment is seen and then left segment is lit up.
 		//introduce a delay between left and the right side of display on SSD such that both segments seem to lit up simultaneously!
 		//If you found out the appropriate frequency value in the previous part1, that might help!
+		int i;
+		for (i = 0; i < 100; i++) {
+			XGpio_DiscreteWrite(&SSDInst, 1, 0b10000000);
+			XGpio_DiscreteWrite(&SSDInst, 1, l_s_b);
+			vTaskDelay(pdMS_TO_TICKS(15));
+			XGpio_DiscreteWrite(&SSDInst, 1, 0b00000000);
+			XGpio_DiscreteWrite(&SSDInst, 1, m_s_b);
+			vTaskDelay(pdMS_TO_TICKS(15));
+		}
 		/**********************************************************************************/
 
 
