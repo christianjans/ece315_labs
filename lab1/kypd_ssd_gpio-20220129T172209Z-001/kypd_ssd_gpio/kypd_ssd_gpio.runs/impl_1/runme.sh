@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.runs/impl_1'
+HD_PWD='C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

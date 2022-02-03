@@ -1,0 +1,36 @@
+22:58:06 **** Incremental Build of configuration Debug for project Part2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/Part2.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Part2.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Part2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/Part2.d" -MT"src/Part2.o" -o "src/Part2.o" "../src/Part2.c"
+../src/Part2.c: In function 'prvTxTask':
+../src/Part2.c:151:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/Part2.c: In function 'prvRxTask':
+../src/Part2.c:262:3: warning: 'btn_value' is used uninitialized in this function [-Wuninitialized]
+   switch(btn_value){
+   ^~~~~~
+'Finished building: ../src/Part2.c'
+' '
+'Building file: ../src/pmodkypd.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pmodkypd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Part2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pmodkypd.d" -MT"src/pmodkypd.o" -o "src/pmodkypd.o" "../src/pmodkypd.c"
+'Finished building: ../src/pmodkypd.c'
+' '
+'Building target: Part2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Part2_bsp/ps7_cortexa9_0/lib -o "Part2.elf"  ./src/Part2.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: Part2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Part2.elf  |tee "Part2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82032	   3448	  89472	 174952	  2ab68	Part2.elf
+'Finished building: Part2.elf.size'
+' '
+
+22:58:07 Build Finished (took 1s.88ms)
+

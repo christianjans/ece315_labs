@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.srcs/constrs_1/new/zybo.xdc rfile:../../../kypd_ssd_gpio.srcs/constrs_1/new/zybo.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.srcs/constrs_1/new/zybo.xdc rfile:../../../kypd_ssd_gpio.srcs/constrs_1/new/zybo.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { btns_4bits_tri_io[0] }]; #IO_L12N_T1_MRCC_35 Sch=btn[0]
 set_property src_info {type:XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
