@@ -217,9 +217,8 @@ static void prvTxTask( void *pvParameters )
 						 //Length of queue=2, hence we only store the key pressed value in queue, when 'E' will be pressed.
 						 //here you write the Queue function to store the value of the last key pressed before 'E'
 						 //hint: a variable is being used in this task that keeps the track of this key value (key presses before 'E')
-
-						 int temp = (int) store_key - 48;
-						 xQueueSendToBack(xQueue, &temp, 0U);
+						 xil_printf("stored key = %d\n\n",store_key);
+						 xQueueSendToBack(xQueue, &store_key, 0U);
 						 /****************************************/
 					}
 				 }
@@ -273,8 +272,8 @@ static void prvRxTask( void *pvParameters )
 		case 2: result = store_operands[0] | store_operands[1]; break;
 		case 4: result = store_operands[0] & store_operands[1]; break;
 		case 8:
-//			xil_printf("op0 = %d\n\n",store_operands[0]);
-//			xil_printf("op1 = %d\n\n",store_operands[1]);
+			xil_printf("op0 = %d\n\n",store_operands[0]);
+			xil_printf("op1 = %d\n\n",store_operands[1]);
 			if (store_operands[1] == 0) {result = -1;}
 			else {result = store_operands[0] % store_operands[1];}
 			break;
@@ -297,7 +296,7 @@ static void prvRxTask( void *pvParameters )
 
 			//set lsb and msb to -1
 			l_s_b = SSD_decode(1, 0);
-			m_s_b = 0b11000000;
+			m_s_b = 0b10000001;
 		}
 
 

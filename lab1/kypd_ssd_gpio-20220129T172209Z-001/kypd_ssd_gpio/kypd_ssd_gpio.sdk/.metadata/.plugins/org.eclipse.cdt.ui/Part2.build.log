@@ -1,4 +1,4 @@
-22:58:06 **** Incremental Build of configuration Debug for project Part2 ****
+00:05:10 **** Incremental Build of configuration Debug for project Part2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -9,16 +9,7 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Part2.o" -mcpu=cor
 ../src/Part2.c:151:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
   UBaseType_t uxPriority;
               ^~~~~~~~~~
-../src/Part2.c: In function 'prvRxTask':
-../src/Part2.c:262:3: warning: 'btn_value' is used uninitialized in this function [-Wuninitialized]
-   switch(btn_value){
-   ^~~~~~
 'Finished building: ../src/Part2.c'
-' '
-'Building file: ../src/pmodkypd.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pmodkypd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Part2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pmodkypd.d" -MT"src/pmodkypd.o" -o "src/pmodkypd.o" "../src/pmodkypd.c"
-'Finished building: ../src/pmodkypd.c'
 ' '
 'Building target: Part2.elf'
 'Invoking: ARM v7 gcc linker'
@@ -28,9 +19,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Part2.elf  |tee "Part2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  82032	   3448	  89472	 174952	  2ab68	Part2.elf
+  82176	   3448	  89472	 175096	  2abf8	Part2.elf
 'Finished building: Part2.elf.size'
 ' '
 
-22:58:07 Build Finished (took 1s.88ms)
+00:05:11 Build Finished (took 816ms)
 

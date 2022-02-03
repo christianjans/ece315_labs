@@ -191,3 +191,567 @@ con
 ----------------End of Script----------------
 
 22:58:15 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+23:25:57 INFO  : Disconnected from the channel tcfchan#4.
+23:25:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:25:59 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+23:25:59 INFO  : 'jtag frequency' command is executed.
+23:25:59 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:25:59 INFO  : Context for 'APU' is selected.
+23:25:59 INFO  : System reset is completed.
+23:26:02 INFO  : 'after 3000' command is executed.
+23:26:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+23:26:03 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:26:03 INFO  : Context for 'APU' is selected.
+23:26:05 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:26:05 INFO  : 'configparams force-mem-access 1' command is executed.
+23:26:05 INFO  : Context for 'APU' is selected.
+23:26:05 INFO  : 'ps7_init' command is executed.
+23:26:05 INFO  : 'ps7_post_config' command is executed.
+23:26:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:26:05 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:26:05 INFO  : 'configparams force-mem-access 0' command is executed.
+23:26:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:26:05 INFO  : Memory regions updated for context APU
+23:26:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:26:05 INFO  : 'con' command is executed.
+23:26:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+23:26:05 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+23:46:25 INFO  : Disconnected from the channel tcfchan#5.
+23:46:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:46:26 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+23:46:26 INFO  : 'jtag frequency' command is executed.
+23:46:26 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:46:26 INFO  : Context for 'APU' is selected.
+23:46:26 INFO  : System reset is completed.
+23:46:29 INFO  : 'after 3000' command is executed.
+23:46:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+23:46:30 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:46:30 INFO  : Context for 'APU' is selected.
+23:46:32 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:46:32 INFO  : 'configparams force-mem-access 1' command is executed.
+23:46:32 INFO  : Context for 'APU' is selected.
+23:46:32 INFO  : 'ps7_init' command is executed.
+23:46:32 INFO  : 'ps7_post_config' command is executed.
+23:46:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:46:32 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:46:32 INFO  : 'configparams force-mem-access 0' command is executed.
+23:46:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:46:32 INFO  : Memory regions updated for context APU
+23:46:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:46:32 INFO  : 'con' command is executed.
+23:46:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+23:46:32 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+23:49:35 INFO  : Disconnected from the channel tcfchan#6.
+23:49:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:49:37 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+23:49:37 INFO  : 'jtag frequency' command is executed.
+23:49:37 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:49:37 INFO  : Context for 'APU' is selected.
+23:49:37 INFO  : System reset is completed.
+23:49:40 INFO  : 'after 3000' command is executed.
+23:49:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+23:49:41 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:49:41 INFO  : Context for 'APU' is selected.
+23:49:43 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:49:43 INFO  : 'configparams force-mem-access 1' command is executed.
+23:49:43 INFO  : Context for 'APU' is selected.
+23:49:43 INFO  : 'ps7_init' command is executed.
+23:49:43 INFO  : 'ps7_post_config' command is executed.
+23:49:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:49:43 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:49:43 INFO  : 'configparams force-mem-access 0' command is executed.
+23:49:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:49:43 INFO  : Memory regions updated for context APU
+23:49:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:49:43 INFO  : 'con' command is executed.
+23:49:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+23:49:43 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+23:50:45 INFO  : Disconnected from the channel tcfchan#7.
+23:50:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:50:46 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+23:50:46 INFO  : 'jtag frequency' command is executed.
+23:50:46 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:50:46 INFO  : Context for 'APU' is selected.
+23:50:46 INFO  : System reset is completed.
+23:50:49 INFO  : 'after 3000' command is executed.
+23:50:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+23:50:51 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:50:51 INFO  : Context for 'APU' is selected.
+23:50:52 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:50:52 INFO  : 'configparams force-mem-access 1' command is executed.
+23:50:52 INFO  : Context for 'APU' is selected.
+23:50:52 INFO  : 'ps7_init' command is executed.
+23:50:52 INFO  : 'ps7_post_config' command is executed.
+23:50:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:50:52 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:50:52 INFO  : 'configparams force-mem-access 0' command is executed.
+23:50:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:50:52 INFO  : Memory regions updated for context APU
+23:50:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:50:52 INFO  : 'con' command is executed.
+23:50:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+23:50:52 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+23:51:50 INFO  : Disconnected from the channel tcfchan#8.
+23:51:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:51:51 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+23:51:51 INFO  : 'jtag frequency' command is executed.
+23:51:51 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:51:51 INFO  : Context for 'APU' is selected.
+23:51:51 INFO  : System reset is completed.
+23:51:54 INFO  : 'after 3000' command is executed.
+23:51:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+23:51:55 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:51:55 INFO  : Context for 'APU' is selected.
+23:51:57 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:51:57 INFO  : 'configparams force-mem-access 1' command is executed.
+23:51:57 INFO  : Context for 'APU' is selected.
+23:51:57 INFO  : 'ps7_init' command is executed.
+23:51:57 INFO  : 'ps7_post_config' command is executed.
+23:51:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:51:57 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:51:57 INFO  : 'configparams force-mem-access 0' command is executed.
+23:51:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:51:57 INFO  : Memory regions updated for context APU
+23:51:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:51:57 INFO  : 'con' command is executed.
+23:51:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+23:51:57 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+23:53:13 INFO  : Disconnected from the channel tcfchan#9.
+23:53:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:53:14 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+23:53:14 INFO  : 'jtag frequency' command is executed.
+23:53:14 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:53:14 INFO  : Context for 'APU' is selected.
+23:53:14 INFO  : System reset is completed.
+23:53:17 INFO  : 'after 3000' command is executed.
+23:53:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+23:53:19 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:53:19 INFO  : Context for 'APU' is selected.
+23:53:20 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:53:20 INFO  : 'configparams force-mem-access 1' command is executed.
+23:53:20 INFO  : Context for 'APU' is selected.
+23:53:20 INFO  : 'ps7_init' command is executed.
+23:53:20 INFO  : 'ps7_post_config' command is executed.
+23:53:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:53:21 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:53:21 INFO  : 'configparams force-mem-access 0' command is executed.
+23:53:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:53:21 INFO  : Memory regions updated for context APU
+23:53:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:53:21 INFO  : 'con' command is executed.
+23:53:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+23:53:21 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+23:55:09 INFO  : Disconnected from the channel tcfchan#10.
+23:55:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:55:10 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+23:55:10 INFO  : 'jtag frequency' command is executed.
+23:55:10 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:55:10 INFO  : Context for 'APU' is selected.
+23:55:11 INFO  : System reset is completed.
+23:55:14 INFO  : 'after 3000' command is executed.
+23:55:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+23:55:15 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:55:15 INFO  : Context for 'APU' is selected.
+23:55:16 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:55:16 INFO  : 'configparams force-mem-access 1' command is executed.
+23:55:16 INFO  : Context for 'APU' is selected.
+23:55:17 INFO  : 'ps7_init' command is executed.
+23:55:17 INFO  : 'ps7_post_config' command is executed.
+23:55:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:55:17 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:55:17 INFO  : 'configparams force-mem-access 0' command is executed.
+23:55:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:55:17 INFO  : Memory regions updated for context APU
+23:55:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:55:17 INFO  : 'con' command is executed.
+23:55:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+23:55:17 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+23:58:06 INFO  : Disconnected from the channel tcfchan#11.
+23:58:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:58:07 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+23:58:07 INFO  : 'jtag frequency' command is executed.
+23:58:07 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:58:07 INFO  : Context for 'APU' is selected.
+23:58:07 INFO  : System reset is completed.
+23:58:10 INFO  : 'after 3000' command is executed.
+23:58:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+23:58:11 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:58:11 INFO  : Context for 'APU' is selected.
+23:58:13 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:58:13 INFO  : 'configparams force-mem-access 1' command is executed.
+23:58:13 INFO  : Context for 'APU' is selected.
+23:58:13 INFO  : 'ps7_init' command is executed.
+23:58:13 INFO  : 'ps7_post_config' command is executed.
+23:58:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:58:13 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:58:13 INFO  : 'configparams force-mem-access 0' command is executed.
+23:58:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:58:13 INFO  : Memory regions updated for context APU
+23:58:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:58:13 INFO  : 'con' command is executed.
+23:58:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+23:58:13 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+23:59:51 INFO  : Disconnected from the channel tcfchan#12.
+23:59:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:59:53 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+23:59:53 INFO  : 'jtag frequency' command is executed.
+23:59:53 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+23:59:53 INFO  : Context for 'APU' is selected.
+23:59:53 INFO  : System reset is completed.
+23:59:56 INFO  : 'after 3000' command is executed.
+23:59:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+23:59:57 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+23:59:57 INFO  : Context for 'APU' is selected.
+23:59:59 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:59:59 INFO  : 'configparams force-mem-access 1' command is executed.
+23:59:59 INFO  : Context for 'APU' is selected.
+23:59:59 INFO  : 'ps7_init' command is executed.
+23:59:59 INFO  : 'ps7_post_config' command is executed.
+23:59:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:59:59 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:59:59 INFO  : 'configparams force-mem-access 0' command is executed.
+23:59:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:59:59 INFO  : Memory regions updated for context APU
+23:59:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:59:59 INFO  : 'con' command is executed.
+23:59:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+23:59:59 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+00:02:47 INFO  : Disconnected from the channel tcfchan#13.
+00:02:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:02:48 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+00:02:48 INFO  : 'jtag frequency' command is executed.
+00:02:48 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:02:48 INFO  : Context for 'APU' is selected.
+00:02:48 INFO  : System reset is completed.
+00:02:51 INFO  : 'after 3000' command is executed.
+00:02:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+00:02:53 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+00:02:53 INFO  : Context for 'APU' is selected.
+00:02:54 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+00:02:54 INFO  : 'configparams force-mem-access 1' command is executed.
+00:02:54 INFO  : Context for 'APU' is selected.
+00:02:54 INFO  : 'ps7_init' command is executed.
+00:02:54 INFO  : 'ps7_post_config' command is executed.
+00:02:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:02:55 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:02:55 INFO  : 'configparams force-mem-access 0' command is executed.
+00:02:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:02:55 INFO  : Memory regions updated for context APU
+00:02:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:02:55 INFO  : 'con' command is executed.
+00:02:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+00:02:55 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+00:03:59 INFO  : Disconnected from the channel tcfchan#14.
+00:04:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:04:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+00:04:00 INFO  : 'jtag frequency' command is executed.
+00:04:00 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:04:00 INFO  : Context for 'APU' is selected.
+00:04:00 INFO  : System reset is completed.
+00:04:03 INFO  : 'after 3000' command is executed.
+00:04:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+00:04:05 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+00:04:05 INFO  : Context for 'APU' is selected.
+00:04:06 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+00:04:06 INFO  : 'configparams force-mem-access 1' command is executed.
+00:04:06 INFO  : Context for 'APU' is selected.
+00:04:06 INFO  : 'ps7_init' command is executed.
+00:04:06 INFO  : 'ps7_post_config' command is executed.
+00:04:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:04:07 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:04:07 INFO  : 'configparams force-mem-access 0' command is executed.
+00:04:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:04:07 INFO  : Memory regions updated for context APU
+00:04:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:04:07 INFO  : 'con' command is executed.
+00:04:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+00:04:07 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'
+00:05:11 INFO  : Disconnected from the channel tcfchan#15.
+00:05:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:05:13 INFO  : Jtag cable 'Digilent Zybo Z7 210351A77EE5A' is selected.
+00:05:13 INFO  : 'jtag frequency' command is executed.
+00:05:13 INFO  : Sourcing of 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+00:05:13 INFO  : Context for 'APU' is selected.
+00:05:13 INFO  : System reset is completed.
+00:05:16 INFO  : 'after 3000' command is executed.
+00:05:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1' command is executed.
+00:05:17 INFO  : FPGA configured successfully with bitstream "C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+00:05:17 INFO  : Context for 'APU' is selected.
+00:05:18 INFO  : Hardware design information is loaded from 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+00:05:18 INFO  : 'configparams force-mem-access 1' command is executed.
+00:05:18 INFO  : Context for 'APU' is selected.
+00:05:19 INFO  : 'ps7_init' command is executed.
+00:05:19 INFO  : 'ps7_post_config' command is executed.
+00:05:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:05:19 INFO  : The application 'C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:05:19 INFO  : 'configparams force-mem-access 0' command is executed.
+00:05:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A" && level==0} -index 1
+fpga -file C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+loadhw -hw C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+dow C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/Part2/Debug/Part2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:05:19 INFO  : Memory regions updated for context APU
+00:05:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:05:19 INFO  : 'con' command is executed.
+00:05:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
+con
+----------------End of Script----------------
+
+00:05:19 INFO  : Launch script is exported to file 'C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_part2.elf_on_local.tcl'

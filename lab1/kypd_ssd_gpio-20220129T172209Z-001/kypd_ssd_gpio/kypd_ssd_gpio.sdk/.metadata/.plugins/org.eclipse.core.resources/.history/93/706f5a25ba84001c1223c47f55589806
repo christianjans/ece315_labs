@@ -107,7 +107,7 @@ int main (void)
 
   /*************************************/
   //Set the directions of the buttons and SSD GPIO peripherals here
-	XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+	XGpio_SetDataDirection(&BTNInst, 1, 0x00);
 	XGpio_SetDataDirection(&SSDInst, 1, 0x00);
   /*************************************/
 
@@ -217,9 +217,7 @@ static void prvTxTask( void *pvParameters )
 						 //Length of queue=2, hence we only store the key pressed value in queue, when 'E' will be pressed.
 						 //here you write the Queue function to store the value of the last key pressed before 'E'
 						 //hint: a variable is being used in this task that keeps the track of this key value (key presses before 'E')
-
-						 int temp = (int) store_key - 48;
-						 xQueueSendToBack(xQueue, &temp, 0U);
+						 xQueueSendToBack(xQueue, &store_key, 0U);
 						 /****************************************/
 					}
 				 }
@@ -257,8 +255,6 @@ static void prvRxTask( void *pvParameters )
 		/***************************************/
 		//read the btn value here to check what user has pressed (^/|/&/%) and store it in say "btn_value" variable declared in this task
 		//For btn(3:0) --> "1000" is for %, "0100" is for &, "0010" is for | and "0001" is for ^
-		btn_value = XGpio_DiscreteRead(&BTNInst, 1);
-		xil_printf("btn val = %d\n\n",btn_value);
 		/***************************************/
 
 
@@ -272,12 +268,7 @@ static void prvRxTask( void *pvParameters )
 		//you may also wait here until the user selects any operation, later on perform the calculation and then go to the TxTask.
 		case 2: result = store_operands[0] | store_operands[1]; break;
 		case 4: result = store_operands[0] & store_operands[1]; break;
-		case 8:
-//			xil_printf("op0 = %d\n\n",store_operands[0]);
-//			xil_printf("op1 = %d\n\n",store_operands[1]);
-			if (store_operands[1] == 0) {result = -1;}
-			else {result = store_operands[0] % store_operands[1];}
-			break;
+		case 8: result = store_operands[0] % store_operands[1]; break;
 		default: vTaskPrioritySet(xTxTask, uxPriority + 1); break;  // Go back to TxTask.
 		/*****************************************************************************************/
 
@@ -289,31 +280,19 @@ static void prvRxTask( void *pvParameters )
 		//the following logic is to extract the digits from the result. For example, 9x9=81 so we will first display 1 on right SSD and then 8 on the left SSD!
 		//please note that our operands are between 0 to 9 only. The result will never exceed a two-digit number in any case.
 
-		u32 l_s_b;
-		u32 m_s_b;
-
-		if(result<0) {
+		if(result<0)
 			xil_printf("Result is less than zero!!!\n");
 
-			//set lsb and msb to -1
-			l_s_b = SSD_decode(1, 0);
-			m_s_b = 0b11000000;
-		}
-
-
-
-		else {
-			//Compute MSB and LSB digits for 2-digit output
-			u8 lsb = result % 10;
-			u8 msb = result / 10;
-
-			l_s_b = SSD_decode(lsb, 0);
-			m_s_b = SSD_decode(msb, 1);
-		}
 
 		vTaskDelay(pdMS_TO_TICKS(1500)); //this delay is merely to introduce the visual difference between the input operands and the output result!
 
 
+		//Compute MSB and LSB digits for 2-digit output
+		u8 lsb = result % 10;
+		u8 msb = result / 10;
+
+		u32 l_s_b = SSD_decode(lsb, 0);
+		u32 m_s_b = SSD_decode(msb, 1);
 
 		/**********************************************************************************/
 		//Use a for loop to display result for 100 Cycles (15ms + 15ms = 30 ms/loop iteration = output displayed for 3 seconds)

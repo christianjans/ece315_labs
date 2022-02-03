@@ -297,7 +297,7 @@ static void prvRxTask( void *pvParameters )
 
 			//set lsb and msb to -1
 			l_s_b = SSD_decode(1, 0);
-			m_s_b = 0b11000000;
+			m_s_b = 0b10000000;
 		}
 
 

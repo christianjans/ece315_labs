@@ -233,3 +233,5 @@ selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
 dismissDialog("Launch SDK"); // aa (cl)
 // Tcl Message: launch_sdk -workspace C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk -hwspec C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper.hdf 
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk -hwspec C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// HMemoryUtils.trashcanNow. Engine heap size: 889 MB. GUI used memory: 62 MB. Current time: 2/2/22, 11:17:15 PM MST
+// HMemoryUtils.trashcanNow. Engine heap size: 889 MB. GUI used memory: 56 MB. Current time: 2/2/22, 11:47:15 PM MST
