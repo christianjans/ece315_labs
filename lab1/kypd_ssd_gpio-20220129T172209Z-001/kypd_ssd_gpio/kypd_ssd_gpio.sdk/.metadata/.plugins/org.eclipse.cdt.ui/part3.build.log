@@ -1,4 +1,4 @@
-20:47:39 **** Incremental Build of configuration Debug for project part3 ****
+21:33:29 **** Incremental Build of configuration Debug for project part3 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -10,15 +10,28 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cor
   UBaseType_t uxPriority;
               ^~~~~~~~~~
 ../src/part3.c: In function 'prvRxTask':
-../src/part3.c:272:7: warning: unused variable 'a' [-Wunused-variable]
-   int a = 3+3;
-       ^
+../src/part3.c:266:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+    sprintf(op1, "%d", store_operands[0]);
+    ^~~~~~~
+../src/part3.c:266:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../src/part3.c:266:4: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../src/part3.c:50:1:
++#include <stdio.h>
+ 
+../src/part3.c:266:4:
+    sprintf(op1, "%d", store_operands[0]);
+    ^~~~~~~
+../src/part3.c:266:19: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+    sprintf(op1, "%d", store_operands[0]);
+                  ~^   ~~~~~~~~~~~~~~~~~
+                  %ld
+../src/part3.c:267:19: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+    sprintf(op2, "%d", store_operands[1]);
+                  ~^   ~~~~~~~~~~~~~~~~~
+                  %ld
 ../src/part3.c:233:7: warning: unused variable 'result' [-Wunused-variable]
    u32 result = 0;
        ^~~~~~
-../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
-  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
-                   ^~~~~~~~~~~~
 'Finished building: ../src/part3.c'
 ' '
 'Building target: part3.elf'
@@ -29,9 +42,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size part3.elf  |tee "part3.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  81592	   3448	  89456	 174496	  2a9a0	part3.elf
+  82152	   3448	  89456	 175056	  2abd0	part3.elf
 'Finished building: part3.elf.size'
 ' '
 
-20:47:40 Build Finished (took 766ms)
+21:33:30 Build Finished (took 710ms)
 

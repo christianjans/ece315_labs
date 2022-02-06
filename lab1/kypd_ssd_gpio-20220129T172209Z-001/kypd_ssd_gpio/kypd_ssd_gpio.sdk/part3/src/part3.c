@@ -260,34 +260,47 @@ static void prvRxTask( void *pvParameters )
 			break;
 		}
 		case 'D': {
-			//determine palindrome
-			xil_printf("palindroming\n");
+			//determine if the operands are palindromes
+
+			char op1[10], op2[10];
+			sprintf(op1, "%d", store_operands[0]);
+			sprintf(op2, "%d", store_operands[1]);
+
+			//test the first operand if it's palindrome
+			int op1Pal = 1;
+			for (int i=0; i<strlen(op1)/2; i++) {
+				if (op1[i] != op1[strlen(op1)-1-i]) {
+					op1Pal = 0;
+				}
+			}
+			if (op1Pal == 1) xil_printf("Operand 1 is a palindrome\n");
+			else xil_printf("Operand 1 is not palindrome\n");
+
+			//test the second operand if it's palindrome
+			int op2Pal = 1;
+			for (int i=0; i<strlen(op2)/2; i++) {
+				if (op2[i] != op2[strlen(op2)-1-i]) {
+					op2Pal = 0;
+				}
+			}
+			if (op2Pal == 1) xil_printf("Operand 2 is a palindrome\n");
+			else xil_printf("Operand 2 is not palindrome\n");
+
+			//if both ops are palindromes
+			if ((op1Pal == 1) && (op2Pal == 1)){
+				//turn on white LED
+				XGpio_DiscreteWrite(&RGBInst, 1, WHITE_IN_RGB);
+				//delay 1.5s
+				vTaskDelay( xDelay1500ms );
+				//turn off LED
+				XGpio_DiscreteWrite(&RGBInst, 1, 0);
+			}
 			break;
-
+		}
 		}
 
-		}
-
-
-		int a = 3+3;
 
 		vTaskPrioritySet(xTxTask, uxPriority + 1);
-
-		/***************************************/
-		//...Write code here to read the three elements from the queue and perform the required operation.
-		//...Display the output result on the console for all the four operations.
-		//...If you have dynamically changed the priority of this task in TxTask, you need to change the priority here accordingly, respectively using vTaskPrioritySet(). This can be done after
-		//	 you finish calculation part.
-		//...This way once the RxTask is done, TxTask will have a higher priority and hence will wait for the next series of inputs from the user
-		//...You can write a switch-case statement or if-else statements for each different operation
-		//...For the Palindrome check, think of a way to find the reverse of each operand (two loops for each operand!) Compared this reverse operand with the original operand.
-		//...For RGB led, look at the function that was used in previous labs for writing the value to the led. Initialization and color definition is already provided to you in this file.
-		/***************************************/
-
-
-
-		//we are now done doing the calculation so again go back to the task 1 (TxTask) to get the new inputs!
-		//vTaskPrioritySet( xTxTask, ( uxPriority + 1 ) );
 
 	}
 }
