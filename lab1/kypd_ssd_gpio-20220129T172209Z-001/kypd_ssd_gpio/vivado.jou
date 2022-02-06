@@ -2,11 +2,19 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Jan 30 19:00:40 2022
-# Process ID: 46712
-# Current directory: C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent47580 C:\Users\bfcoc\Downloads\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.xpr
-# Log file: C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/vivado.log
-# Journal file: C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio\vivado.jou
-#-----------------------------------------------------------sstart_guiopen_project C:/Users/bfcoc/Downloads/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.xpr
+# Start of session at: Sat Feb  5 18:46:12 2022
+# Process ID: 19792
+# Current directory: C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13692 C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.xpr
+# Log file: C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/vivado.log
+# Journal file: C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.xpr
 update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.runs/impl_1/design_1_wrapper.sysdef C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper.hdf
+
+launch_sdk -workspace C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk -hwspec C:/Users/Matt/Desktop/ece315_labs/lab1/kypd_ssd_gpio-20220129T172209Z-001/kypd_ssd_gpio/kypd_ssd_gpio.sdk/design_1_wrapper.hdf

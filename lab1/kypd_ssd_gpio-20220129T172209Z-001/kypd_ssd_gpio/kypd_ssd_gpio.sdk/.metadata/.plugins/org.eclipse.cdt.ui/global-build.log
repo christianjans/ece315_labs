@@ -1,0 +1,1058 @@
+18:53:02 **** Build of project part3_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"include"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src"
+make -C ps7_cortexa9_0/libsrc/freertos10_xilinx_v1_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Compiling FreeRTOS"
+arm-none-eabi-ar: creating ../../../lib/libfreertos.a
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+18:53:21 **** Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+'Finished building: ../src/freertos_hello_world.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/freertos_hello_world.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77708	   3388	  89424	 170520	  29a18	part3.elf
+'Finished building: part3.elf.size'
+' '
+18:53:51 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_hello_world.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_hello_world.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_hello_world.d" -MT"src/freertos_hello_world.o" -o "src/freertos_hello_world.o" "../src/freertos_hello_world.c"
+../src/freertos_hello_world.c:36:10: fatal error: pmodkypd.h: No such file or directory
+ #include "pmodkypd.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/freertos_hello_world.o] Error 1
+18:54:00 **** Clean-only build of configuration Debug for project part3 ****
+make clean 
+rm -rf  ./src/freertos_hello_world.o  ./src/freertos_hello_world.d  part3.elf.size  part3.elf
+' '
+18:54:00 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c:36:10: fatal error: pmodkypd.h: No such file or directory
+ #include "pmodkypd.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/part3.o] Error 1
+18:54:13 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:150:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/part3.o: in function `DemoInitialize':
+C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\part3\Debug/../src/part3.c:66: undefined reference to `KYPD_begin'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\part3\Debug/../src/part3.c:67: undefined reference to `KYPD_loadKeyTable'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ./src/part3.o: in function `prvTxTask':
+C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\part3\Debug/../src/part3.c:170: undefined reference to `KYPD_getKeyStates'
+c:/xilinx/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: C:\Users\Matt\Desktop\ece315_labs\lab1\kypd_ssd_gpio-20220129T172209Z-001\kypd_ssd_gpio\kypd_ssd_gpio.sdk\part3\Debug/../src/part3.c:174: undefined reference to `KYPD_getKeyPressed'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: part3.elf] Error 1
+18:54:20 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/pmodkypd.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pmodkypd.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pmodkypd.d" -MT"src/pmodkypd.o" -o "src/pmodkypd.o" "../src/pmodkypd.c"
+'Finished building: ../src/pmodkypd.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  82176	   3448	  89472	 175096	  2abf8	part3.elf
+'Finished building: part3.elf.size'
+' '
+18:55:04 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:55:32 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:00:29 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:222:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+../src/part3.c:219:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  80888	   3448	  89456	 173792	  2a6e0	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:13:01 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:225:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81040	   3448	  89456	 173944	  2a778	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:19:01 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81104	   3448	  89456	 174008	  2a7b8	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:20:44 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81128	   3448	  89456	 174032	  2a7d0	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:26:40 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81128	   3448	  89456	 174032	  2a7d0	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:27:25 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81128	   3448	  89456	 174032	  2a7d0	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:28:40 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:233:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81104	   3448	  89456	 174008	  2a7b8	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:29:46 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:231:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81128	   3448	  89456	 174032	  2a7d0	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:31:34 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:231:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81128	   3448	  89456	 174032	  2a7d0	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:34:56 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:231:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81128	   3448	  89456	 174032	  2a7d0	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:35:54 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:38:14 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:50:54 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:232:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:228:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81216	   3448	  89456	 174120	  2a828	part3.elf
+'Finished building: part3.elf.size'
+' '
+19:52:59 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:243:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:228:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81280	   3448	  89456	 174184	  2a868	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:09:00 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:233:3: error: unknown type name 'i64'; did you mean 'u64'?
+   i64 result = 0;
+   ^~~
+   u64
+../src/part3.c:268:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/part3.o] Error 1
+20:10:51 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:268:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81392	   3448	  89456	 174296	  2a8d8	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:11:06 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:12:51 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:271:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81392	   3448	  89456	 174296	  2a8d8	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:14:33 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:275:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81496	   3448	  89456	 174400	  2a940	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:15:59 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:275:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81514	   3448	  89456	 174418	  2a952	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:17:04 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:275:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81504	   3448	  89456	 174408	  2a948	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:19:50 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:132:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:269:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:233:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81408	   3448	  89456	 174312	  2a8e8	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:24:16 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:133:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:270:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:234:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:228:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81408	   3448	  89456	 174312	  2a8e8	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:26:02 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:133:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:247:56: error: 'u32_MAX' undeclared (first use in this function); did you mean 'ARG_MAX'?
+    if ((store_operands[0] > 0) && (store_operands[1] > u32_MAX - x)) {
+                                                        ^~~~~~~
+                                                        ARG_MAX
+../src/part3.c:247:56: note: each undeclared identifier is reported only once for each function it appears in
+../src/part3.c:247:66: error: 'x' undeclared (first use in this function)
+    if ((store_operands[0] > 0) && (store_operands[1] > u32_MAX - x)) {
+                                                                  ^
+../src/part3.c:274:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:234:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:228:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/part3.o] Error 1
+20:26:40 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:133:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:247:56: error: 'u32_MAX' undeclared (first use in this function); did you mean 'ARG_MAX'?
+    if ((store_operands[1] > 0) && (store_operands[0] > u32_MAX - store_operands[1])) {
+                                                        ^~~~~~~
+                                                        ARG_MAX
+../src/part3.c:247:56: note: each undeclared identifier is reported only once for each function it appears in
+../src/part3.c:274:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:234:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:228:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/part3.o] Error 1
+20:27:30 **** Auto Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:133:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:274:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:234:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:228:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81408	   3448	  89456	 174312	  2a8e8	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:29:40 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:133:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:274:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:234:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:228:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81496	   3448	  89456	 174400	  2a940	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:33:15 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:133:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:274:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:234:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:228:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81496	   3448	  89456	 174400	  2a940	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:37:07 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:133:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:271:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:233:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81512	   3448	  89456	 174416	  2a950	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:42:12 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:133:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:272:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:233:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81576	   3448	  89456	 174480	  2a990	part3.elf
+'Finished building: part3.elf.size'
+' '
+20:47:39 **** Incremental Build of configuration Debug for project part3 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/part3.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/part3.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../part3_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/part3.d" -MT"src/part3.o" -o "src/part3.o" "../src/part3.c"
+../src/part3.c: In function 'prvTxTask':
+../src/part3.c:133:14: warning: variable 'uxPriority' set but not used [-Wunused-but-set-variable]
+  UBaseType_t uxPriority;
+              ^~~~~~~~~~
+../src/part3.c: In function 'prvRxTask':
+../src/part3.c:272:7: warning: unused variable 'a' [-Wunused-variable]
+   int a = 3+3;
+       ^
+../src/part3.c:233:7: warning: unused variable 'result' [-Wunused-variable]
+   u32 result = 0;
+       ^~~~~~
+../src/part3.c:227:19: warning: unused variable 'xDelay1500ms' [-Wunused-variable]
+  const TickType_t xDelay1500ms = pdMS_TO_TICKS(1500UL);
+                   ^~~~~~~~~~~~
+'Finished building: ../src/part3.c'
+' '
+'Building target: part3.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../part3_bsp/ps7_cortexa9_0/lib -o "part3.elf"  ./src/part3.o ./src/pmodkypd.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: part3.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size part3.elf  |tee "part3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  81592	   3448	  89456	 174496	  2a9a0	part3.elf
+'Finished building: part3.elf.size'
+' '
