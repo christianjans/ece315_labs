@@ -193,14 +193,14 @@ static void TaskMorseMsgReceiver( void *pvParameters ){
 
     /***********************************************/
     // enforce polling frequency here using the Delay function. The 20ms period has been already defined in this task for you!
-    vTaskDelay(xPeriod);
+    vTaskDelayUntil(&xLastWakeTime, xPeriod);
     /***********************************************/
 
     // Receive characters over UART if there's room in the queue
     if (uxQueueMessagesWaiting(xQueue_12) < XQUEUE_12_CAPACITY) {
 
       /***********************************************/
-      //write the function to receive the UART character into "RecvChar" variable. 
+      //write the function to receive the UART character into "RecvChar" variable.
       //HINT : the function to be used here is indicated in the lab handout.
       //find that function and study it from this link: https://xilinx.github.io/embeddedsw.github.io/uartps/doc/html/api/globals.html
       RecvChar = XUartPs_RecvByte(UART_BASEADDR);
@@ -248,6 +248,13 @@ static void TaskMorseMsgProcessor( void *pvParameters ){
           read_from_queue12_value[no_of_characters_read - 1] == '\r' &&
           read_from_queue12_value[no_of_characters_read - 2] == '#' &&
           read_from_queue12_value[no_of_characters_read - 3] == '\r') {
+    	// Translate the received message from Morse code to ASCII. Don't read the
+		// last 3 characters in read_from_queue12_value since this is the defined
+		// end sequence '\r#\r'.
+		int j;
+		for (j = 0; j < no_of_characters_read - 3; j++) {
+		  morseToTextConverter(read_from_queue12_value[j]);
+		}
         break_loop = TRUE;
         break;
       }
@@ -278,20 +285,12 @@ static void TaskMorseMsgProcessor( void *pvParameters ){
     if (error_flag) {
       // Send the error message.
       for (i = 0; i < output_length; i++) {
-        xQueueSendToBack(xQueue23, &read_from_queue12_value[i], portMAX_DELAY);
+        xQueueSendToBack(xQueue_23, &read_from_queue12_value[i], portMAX_DELAY);
       }
     } else {
-      // Translate the received message from Morse code to ASCII. Don't read the
-      // last 3 characters in read_from_queue12_value since this is the defined
-      // end sequence '\r#\r'.
-      int j;
-      for (j = 0; j < no_of_characters_read - 3; j++) {
-        morseToTextConverter(read_from_queue12_value[j]);
-      }
-
       // Send the received message that is now in output_text_sequence.
       for (i = 0; i < output_length; i++) {
-        xQueueSendToBack(xQueue23, &output_text_sequence[i], portMAX_DELAY);
+        xQueueSendToBack(xQueue_23, &output_text_sequence[i], portMAX_DELAY);
       }
     }
     /***********************************************/
@@ -344,4 +343,3 @@ static void UART_print_queueerror_msg(char * str) {
       return;
   }
 }
-
