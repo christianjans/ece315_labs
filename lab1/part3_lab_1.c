@@ -249,7 +249,7 @@ static void prvRxTask( void *pvParameters )
     }
     case 'B': {
       //subtract
-      if (store_operands[0] < INT_MIN + store_operands[1]) xil_printf("Error: Underflow\n");
+      if (store_operands[0] > store_operands[1]) xil_printf("Error: Underflow\n");
       else xil_printf("%d - %d = %d\n", store_operands[0], store_operands[1], store_operands[0] - store_operands[1]);
       break;
     }
