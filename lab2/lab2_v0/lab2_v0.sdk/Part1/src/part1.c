@@ -32,6 +32,7 @@
  * -------------------------------------------
  * Explanation for what happens during the overflow i.e., when you exceed the 500 limit:
  *
+ *
  * The morse code for HI ROBERT is  ....|..| .-.|---|-...|.|.-.|-| and then press ENTER. This accounts for a total of 31 characters. (including the ENTER)
  * To cause overflow, you need to repeat entering this morse code sequence 16 times (496 characters) + 1 more time to cause the overflow. Hence, total 17 times.
  * This means 31 * (17-1) = 496 characters + four characters from the 17th time entered sequence will be lost as a result of overflow and wouldn't be translated.
@@ -40,6 +41,7 @@
  * TRY IT!
  * ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
+
 
 /***************************** Include Files *********************************/
 #include "xparameters.h"
@@ -193,7 +195,7 @@ static void TaskMorseMsgReceiver( void *pvParameters ){
 
     /***********************************************/
     // enforce polling frequency here using the Delay function. The 20ms period has been already defined in this task for you!
-    vTaskDelay(xPeriod);
+    vTaskDelayUntil(&xLastWakeTime, xPeriod);
     /***********************************************/
 
     // Receive characters over UART if there's room in the queue
@@ -248,6 +250,13 @@ static void TaskMorseMsgProcessor( void *pvParameters ){
           read_from_queue12_value[no_of_characters_read - 1] == '\r' &&
           read_from_queue12_value[no_of_characters_read - 2] == '#' &&
           read_from_queue12_value[no_of_characters_read - 3] == '\r') {
+    	// Translate the received message from Morse code to ASCII. Don't read the
+		// last 3 characters in read_from_queue12_value since this is the defined
+		// end sequence '\r#\r'.
+		int j;
+		for (j = 0; j < no_of_characters_read - 3; j++) {
+		  morseToTextConverter(read_from_queue12_value[j]);
+		}
         break_loop = TRUE;
         break;
       }
@@ -278,20 +287,12 @@ static void TaskMorseMsgProcessor( void *pvParameters ){
     if (error_flag) {
       // Send the error message.
       for (i = 0; i < output_length; i++) {
-        xQueueSendToBack(xQueue23, &read_from_queue12_value[i], portMAX_DELAY);
+        xQueueSendToBack(xQueue_23, &read_from_queue12_value[i], portMAX_DELAY);
       }
     } else {
-      // Translate the received message from Morse code to ASCII. Don't read the
-      // last 3 characters in read_from_queue12_value since this is the defined
-      // end sequence '\r#\r'.
-      int j;
-      for (j = 0; j < no_of_characters_read - 3; j++) {
-        morseToTextConverter(read_from_queue12_value[j]);
-      }
-
       // Send the received message that is now in output_text_sequence.
       for (i = 0; i < output_length; i++) {
-        xQueueSendToBack(xQueue23, &output_text_sequence[i], portMAX_DELAY);
+        xQueueSendToBack(xQueue_23, &output_text_sequence[i], portMAX_DELAY);
       }
     }
     /***********************************************/
