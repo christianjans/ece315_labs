@@ -69,17 +69,17 @@ set rc [catch {
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/bfcoc/Downloads/lab_2_W2022/lab2_v0/lab2_v0.cache/wt [current_project]
-  set_property parent.project_path C:/Users/bfcoc/Downloads/lab_2_W2022/lab2_v0/lab2_v0.xpr [current_project]
-  set_property ip_output_repo C:/Users/bfcoc/Downloads/lab_2_W2022/lab2_v0/lab2_v0.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Matt/Desktop/ece315_labs/lab2/lab2_v0/lab2_v0.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Matt/Desktop/ece315_labs/lab2/lab2_v0/lab2_v0.xpr [current_project]
+  set_property ip_output_repo C:/Users/Matt/Desktop/ece315_labs/lab2/lab2_v0/lab2_v0.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/bfcoc/Downloads/lab_2_W2022/lab2_v0/lab2_v0.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Users/Matt/Desktop/ece315_labs/lab2/lab2_v0/lab2_v0.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/bfcoc/Downloads/lab_2_W2022/lab2_v0/lab2_v0.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/Users/Matt/Desktop/ece315_labs/lab2/lab2_v0/lab2_v0.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/bfcoc/Downloads/lab_2_W2022/lab2_v0/lab2_v0.srcs/constrs_1/new/zybo.xdc
+  read_xdc C:/Users/Matt/Desktop/ece315_labs/lab2/lab2_v0/lab2_v0.srcs/constrs_1/new/zybo.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false
