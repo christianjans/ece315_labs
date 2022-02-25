@@ -248,13 +248,13 @@ static void TaskMorseMsgProcessor( void *pvParameters ){
           read_from_queue12_value[no_of_characters_read - 1] == '\r' &&
           read_from_queue12_value[no_of_characters_read - 2] == '#' &&
           read_from_queue12_value[no_of_characters_read - 3] == '\r') {
-    	// Translate the received message from Morse code to ASCII. Don't read the
-		// last 3 characters in read_from_queue12_value since this is the defined
-		// end sequence '\r#\r'.
-		int j;
-		for (j = 0; j < no_of_characters_read - 3; j++) {
-		  morseToTextConverter(read_from_queue12_value[j]);
-		}
+        // Translate the received message from Morse code to ASCII. Don't read the
+        // last 3 characters in read_from_queue12_value since this is the defined
+        // end sequence '\r#\r'.
+        int j;
+        for (j = 0; j < no_of_characters_read - 3; j++) {
+          morseToTextConverter(read_from_queue12_value[j]);
+        }
         break_loop = TRUE;
         break;
       }
