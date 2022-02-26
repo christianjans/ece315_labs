@@ -107,7 +107,7 @@ void Task_UART_buffer_receive(void *p){
   printString("Please enter the text and then press ENTER\n");
   printString("To display the status messages, enter the end-of-block sequence, \\r#\\r and then press ENTER\n");
   printString("To reset the ISR transmit and receive global counters as well as byte counter, enter the sequence \\r%\\r and then press ENTER\n");
-  
+
   for( ;; ){
     while(1){
         u8 pcString;
@@ -133,7 +133,7 @@ void Task_UART_buffer_receive(void *p){
         //"write_to_queue_value" variable.
         //store the changed byte to "write_to_queue_value" itself.
 
-      
+
         /*******************************************************/
 
         /*******************************************************/
@@ -162,7 +162,7 @@ void Task_UART_buffer_receive(void *p){
         //the counter variables have been already given to you.
         //note that the received character byte is stored inside "write_to_queue_value" variable.
 
-        
+
         /*******************************************************/
       }
   }
