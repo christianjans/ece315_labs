@@ -145,15 +145,18 @@ void Task_UART_buffer_receive(void *p){
         //write one line of code to increment the variable used as a byte counter for UART characters
         /*******************************************************/
         Countbytes++;
+        int testnum = Countbytes;
 
         MySendByte(write_to_queue_value);
 
         //detect \r#\r
 		if (returnFlag == 2 && write_to_queue_value == CHAR_CARRIAGE_RETURN){
 		  returnFlag = 0;
+		  restartFlag = 0;
 		  taskYIELD(); //force context switch
 		}else if (returnFlag == 1 && write_to_queue_value == CHAR_ESC){
 		  returnFlag = 2;
+		  restartFlag = 0; //the sequence is not trying to reset
 		}else if (write_to_queue_value == CHAR_CARRIAGE_RETURN){
 		  returnFlag = 1;
 		}else{
@@ -172,6 +175,7 @@ void Task_UART_buffer_receive(void *p){
 		//detect \r%\r
 		if (restartFlag == 2 && write_to_queue_value == CHAR_CARRIAGE_RETURN){
 			restartFlag = 0;
+			returnFlag = 0;
 
 			//reset the various parameters
 			xil_printf("Byte Counter, CountRxIrq && CountTxIrq set to zero\n\n");
@@ -181,6 +185,7 @@ void Task_UART_buffer_receive(void *p){
 			//taskYIELD(); //force context switch
 		}else if (restartFlag == 1 && write_to_queue_value == '%'){
 			restartFlag = 2;
+			returnFlag = 0; //the sequence is trying to reset, not to display info
 		}else if (write_to_queue_value == CHAR_CARRIAGE_RETURN){
 			restartFlag = 1;
 		}else{
