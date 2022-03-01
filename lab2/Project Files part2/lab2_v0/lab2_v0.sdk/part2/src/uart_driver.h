@@ -56,6 +56,7 @@ void Interrupt_Handler(void *CallBackRef, u32 Event, unsigned int EventData)
       /*******************************************************/
       //add one line of code to increment the receive interrupt counter variable
       CountRxIrq++;
+
       /*******************************************************/
 
       /*******************************************************/
@@ -70,12 +71,14 @@ void Interrupt_Handler(void *CallBackRef, u32 Event, unsigned int EventData)
       portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
   }
   else if (Event == XUARTPS_EVENT_SENT_DATA){
+
     BaseType_t xHigherPriorityTaskWoken;
     xHigherPriorityTaskWoken = pdFALSE;
 
     /*******************************************************/
     //add one line of code to increment the transmit interrupt counter variable
     CountTxIrq++;
+    int temp = CountTxIrq;
     /*******************************************************/
 
       //case when there are bytes inside the transmit byte and TxFIFO is not Full yet!
@@ -154,6 +157,7 @@ void MySendByte( u8 Data ) {
   //add the code to enable TEMPTY interrupt bit. You can first read the interrupt mask and then set the interrupt mask using the XUARTPS_IXR_TXEMPTY.
   //see the ISR code for transmit Interrupt event where there is a mechanism to first read the interrupt mask and then set it as user wants.
   //But the difference is, here you have to "enable" the XUARTPS_IXR_TXEMPTY bit.! In ISR, we have disabled this bit!
+
 
   //read the current interrupt mask
   mask = XUartPs_GetInterruptMask(&UART);
