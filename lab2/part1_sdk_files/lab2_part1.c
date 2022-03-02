@@ -32,6 +32,7 @@
  * -------------------------------------------
  * Explanation for what happens during the overflow i.e., when you exceed the 500 limit:
  *
+ *
  * The morse code for HI ROBERT is  ....|..| .-.|---|-...|.|.-.|-| and then press ENTER. This accounts for a total of 31 characters. (including the ENTER)
  * To cause overflow, you need to repeat entering this morse code sequence 16 times (496 characters) + 1 more time to cause the overflow. Hence, total 17 times.
  * This means 31 * (17-1) = 496 characters + four characters from the 17th time entered sequence will be lost as a result of overflow and wouldn't be translated.
@@ -40,6 +41,7 @@
  * TRY IT!
  * ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
+
 
 /***************************** Include Files *********************************/
 #include "xparameters.h"
