@@ -13,10 +13,10 @@ preplace netloc processing_system7_0_SPI1_MISO_O 1 1 1 400 220n
 preplace netloc processing_system7_0_SPI0_MISO_O 1 1 1 360 240n
 preplace netloc processing_system7_0_SPI1_SS_O 1 1 1 390 260n
 preplace netloc processing_system7_0_SPI0_SS_O 1 1 1 350 280n
-preplace netloc processing_system7_0_DDR 1 1 1 350J 50n
 preplace netloc processing_system7_0_FIXED_IO 1 1 1 420J 80n
+preplace netloc processing_system7_0_DDR 1 1 1 350J 50n
 levelinfo -pg 1 0 200 480
-pagesize -pg 1 -db -bbox -sgen 0 0 590 560
+pagesize -pg 1 -db -bbox -sgen 0 0 600 560
 "
 }
 {

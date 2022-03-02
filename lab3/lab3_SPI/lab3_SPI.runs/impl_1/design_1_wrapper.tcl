@@ -69,14 +69,14 @@ set rc [catch {
   create_project -in_memory -part xc7z010clg400-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/bfcoc/zynq_practice/ECE_315_WINTER_2021_LABS/lab3_SPI/lab3_SPI.cache/wt [current_project]
-  set_property parent.project_path C:/Users/bfcoc/zynq_practice/ECE_315_WINTER_2021_LABS/lab3_SPI/lab3_SPI.xpr [current_project]
-  set_property ip_output_repo C:/Users/bfcoc/zynq_practice/ECE_315_WINTER_2021_LABS/lab3_SPI/lab3_SPI.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI/lab3_SPI.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI/lab3_SPI.xpr [current_project]
+  set_property ip_output_repo C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI/lab3_SPI.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/bfcoc/zynq_practice/ECE_315_WINTER_2021_LABS/lab3_SPI/lab3_SPI.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI/lab3_SPI.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/bfcoc/zynq_practice/ECE_315_WINTER_2021_LABS/lab3_SPI/lab3_SPI.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI/lab3_SPI.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z010clg400-1

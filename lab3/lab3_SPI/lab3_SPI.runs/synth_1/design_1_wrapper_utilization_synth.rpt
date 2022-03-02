@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Mar 14 11:34:52 2021
-| Host         : SG-laptop running 64-bit major release  (build 9200)
+| Date         : Wed Mar  2 14:37:39 2022
+| Host         : DESKTOP-IFM86FH running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
 | Device       : 7z010clg400-1
@@ -172,11 +172,11 @@ Table of Contents
 9. Black Boxes
 --------------
 
-+---------------------------------+------+
-|             Ref Name            | Used |
-+---------------------------------+------+
-| design_1_processing_system7_0_0 |    1 |
-+---------------------------------+------+
++----------+------+
+| Ref Name | Used |
++----------+------+
+| design_1 |    1 |
++----------+------+
 
 
 10. Instantiated Netlists
