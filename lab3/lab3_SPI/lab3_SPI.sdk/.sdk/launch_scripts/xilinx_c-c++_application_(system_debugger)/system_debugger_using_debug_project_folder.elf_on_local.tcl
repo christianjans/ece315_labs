@@ -14,5 +14,4 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
 dow C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI/lab3_SPI.sdk/project_folder/Debug/project_folder.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351A77EE5A"} -index 0
-con
+bpadd -addr &main

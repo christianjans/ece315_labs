@@ -256,14 +256,19 @@ static void TaskSpi0Master( void *pvParameters ){
       /*******************************************/
       //write the code here to copy the received data from the FIFO1 into "sendbuffer" variable. The "sendbuffer" variable is declared for you.
       //You want to transfer the bytes based on the TRANSFER_SIZE_IN_BYTES value.
-      //You can use the write function for MasterSPI (from the driver file) for that and then you want to use task_YIELD() that allows the slave SPI task to work.
+      //You can use the write function for MasterSPI (from the driver file) for that and then you want to use taskYIELD() that allows the slave SPI task to work.
       //Finally, you want to use the read from master implementation using the function from the driver file provided. Then send the data to the back of the FIFO2 and reset the "bytecount" variable to zero.
       
+      send_buffer[0] = task2_receive_from_FIFO1;
       bytecount++;
+
       if(bytecount==TRANSFER_SIZE_IN_BYTES){
-        
-        
-        
+
+    	  SpiMasterWrite(&send_buffer[0], bytecount);
+    	  taskYIELD();
+    	  u8 charsent = SpiMasterRead(1); // '/000'
+    	  xQueueSendToBack(xQueue_FIFO2, &charsent, 0UL);
+    	  bytecount=0;
       }
       /*******************************************/
 
@@ -292,11 +297,31 @@ static void TaskSpi1Slave( void *pvParameters ){
     //Once \r#\r is detected you want to now send the message string and you may use a looping method to send it to the SPI master.
 
     if(spi_master_loopback_en==0 && current_command_execution_flag==2){
-    	xil_printf("external SPI activated\n");
 
     	//echo all characters that were sent
 
     	//print termination statement about how many characters were received
+
+    	SpiSlaveRead(1);
+		  u8 received = RxBuffer_Slave[0];
+		  num_received++;
+		  SpiSlaveWrite(&received, 1);
+
+		  if (end_sequence_flag == 2 && received == CHAR_CARRIAGE_RETURN) {
+			strcpy(buffer, "The number of characters received over SPI:%d\n");
+			for (int i = 0; i < 48; i++) {
+				temp_store = buffer[i];
+			  SpiSlaveWrite(&temp_store, 1);
+			}
+		  } else if (end_sequence_flag == 1 && received == CHAR_POUND_HASH) {
+			end_sequence_flag++;
+		  } else if (end_sequence_flag == CHAR_CARRIAGE_RETURN) {
+			end_sequence_flag++;
+		  } else {
+			end_sequence_flag = 0;
+		  }
+
+
 
     }
     /*******************************************/
@@ -357,10 +382,10 @@ void toggleSpiMasterLoopback(void){
   current_command_execution_flag = 2;
   spi_master_loopback_en = !spi_master_loopback_en;
   if(spi_master_loopback_en==1){
-    xil_printf("\n*** Task2 loopback enabled : No access to SPI0 interface ***\r\n");
+    xil_printf("\n*** Task2 loopback disabled : No access to SPI0 interface ***\r\n");
   }
   else{
-    xil_printf("\n*** Task2 loopback disabled using command toggling : SPI0-SPI1 in effect. Send the bytes from the console ***\r\n");
+    xil_printf("\n*** Task2 loopback enabled using command toggling : SPI0-SPI1 in effect. Send the bytes from the console ***\r\n");
   }
 }
 
