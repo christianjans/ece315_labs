@@ -98,11 +98,6 @@ static void TaskLoopCountProcessor(void *pvParameters){
     * That means, incase if you choose a loop count increment higher 50000, you will have to provide more delay to let this loop count stabilize!
     * Above statements explain the overview of this FreeRTOS task. Please add the code in the comments below to achieve the implementation.
     */
-
-
-    // TODO!!! Read the manual! There's something that has to be changed in the IDE.
-
-
     if(loop_count >= 500000){
       /**************************************************/
       //update the "delay" variable here to provide the delay of 90000
@@ -141,7 +136,7 @@ static void TaskCpuLoadGen( void *pvParameters ){
     * Setup a for loop where this task is executing a simple bitwise complement operation for "loop_count" number of times on the variable "var"
     */
     for (int i = 0; i < loop_count; i++) {
-      var ~= var;
+      var = ~var;
     }
     /*************************************************/
     vTaskDelay(1);
@@ -171,7 +166,3 @@ static void TaskPrintRunTimeStats( void *pvParameters )
     vTaskDelay(delay);
   }
 }
-
-
-
-
