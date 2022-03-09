@@ -113,12 +113,11 @@ static void TaskLoopCountProcessor(void *pvParameters){
 
     /**************************************************/
     //write a line of code that increments the "loop_count" variable by 25000/50000
-    loop_count += 25000;
+    loop_count += 50000;
     /**************************************************/
     run = 0;
     xil_printf("\n\nCurrent loop count value = %d\n\n", loop_count);
     vTaskDelay(delay);
-
     vTaskDelay(1);
   }
 }
@@ -158,7 +157,7 @@ static void TaskPrintRunTimeStats( void *pvParameters )
     * Print the results of the vTaskGetRunTimeStats() function onto the terminal
     * Declare the output variable that you want to use with the vTaskGetRunTimeStats() function
     */
-    char runtime_stats[40];  // Documentation says 40 bytes should be sufficient.
+    char* runtime_stats = NULL;
     vTaskGetRunTimeStats(runtime_stats);
     xil_printf("\n%s", runtime_stats);
     /*************************************************/
