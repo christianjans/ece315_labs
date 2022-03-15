@@ -187,6 +187,19 @@ static void TaskUartManager( void *pvParameters ){
         //Also wait on to receive the bytes coming from the SPIMaster task via FIFO2
         //If there is space on the Transmitter UART side, send it to the UART using an appropriate UART write function.
 
+        xQueueSendToBack(xQueue_FIFO1, &dummy, portMAX_DELAY);
+
+        // TODO: Is this correct?
+        u8 received_byte;
+        while (uxQueueMessagesWaitingFromISR(xQueue_FIFO2) > 0 &&
+               !XUartPs_IsTransmitFull(XPAR_XUARTPS_0_BASEADDR)){
+          xQueueReceiveFromISR(xQueue_for_transmit,
+                               &transmit_data,
+                               &xHigherPriorityTaskWoken);
+          XUartPs_WriteReg(XPAR_XUARTPS_0_BASEADDR,
+                           XUARTPS_FIFO_OFFSET,
+                           transmit_data);
+        }
 
         /*******************************************/
       }
@@ -292,8 +305,23 @@ static void TaskSpi1Slave( void *pvParameters ){
     //Once \r#\r is detected you want to now send the message string and you may use a looping method to send it to the SPI master.
 
     if(spi_master_loopback_en==0 && current_command_execution_flag==2){
-    
+      SpiSlaveRead(1);
+      char received = RxBuffer_Slave[0];
+      num_received++;
+      SpiSlaveWrite(&received, 1);
 
+      if (end_sequence_flag == 2 && received == CHAR_CARRIAGE_RETURN) {
+        strcpy(buffer, "The number of characters received over SPI:%d\n")
+        for (int i = 0; i < 48; i++) {
+          SpiSlaveWrite(&buffer[i], 1);
+        }
+      } else if (end_sequence_flag == 1 && received == CHAR_POUND_HASH) {
+        end_sequence_flag++;
+      } else if (end_sequence_flag == CHAR_CARRIAGE_RETURN) {
+        end_sequence_flag++;
+      } else {
+        end_sequence_flag = 0;
+      }
     }
     /*******************************************/
 

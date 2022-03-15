@@ -98,28 +98,26 @@ static void TaskLoopCountProcessor(void *pvParameters){
     * That means, incase if you choose a loop count increment higher 50000, you will have to provide more delay to let this loop count stabilize!
     * Above statements explain the overview of this FreeRTOS task. Please add the code in the comments below to achieve the implementation.
     */
-
     if(loop_count >= 500000){
       /**************************************************/
       //update the "delay" variable here to provide the delay of 90000
-
+      delay = pdMS_TO_TICKS(90000);
       /**************************************************/
     }
     if(loop_count >= 1000000){
       /**************************************************/
       //update the "delay" variable here to provide the delay of 120000
-
+      delay = pdMS_TO_TICKS(120000);
       /**************************************************/
     }
 
     /**************************************************/
     //write a line of code that increments the "loop_count" variable by 25000/50000
-
+    loop_count += 50000;
     /**************************************************/
     run = 0;
     xil_printf("\n\nCurrent loop count value = %d\n\n", loop_count);
     vTaskDelay(delay);
-
     vTaskDelay(1);
   }
 }
@@ -136,6 +134,9 @@ static void TaskCpuLoadGen( void *pvParameters ){
     /*
     * Setup a for loop where this task is executing a simple bitwise complement operation for "loop_count" number of times on the variable "var"
     */
+    for (int i = 0; i < loop_count; i++) {
+      var = ~var;
+    }
     /*************************************************/
     vTaskDelay(1);
   }
@@ -156,12 +157,11 @@ static void TaskPrintRunTimeStats( void *pvParameters )
     * Print the results of the vTaskGetRunTimeStats() function onto the terminal
     * Declare the output variable that you want to use with the vTaskGetRunTimeStats() function
     */
+    char* runtime_stats = NULL;
+    vTaskGetRunTimeStats(runtime_stats);
+    xil_printf("\n%s", runtime_stats);
     /*************************************************/
     run ++;
     vTaskDelay(delay);
   }
 }
-
-
-
-
