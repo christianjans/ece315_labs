@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Mar 29 15:51:39 2021
+# Process ID: 13388
+# Current directory: C:/Users/bfcoc/OneDrive/Desktop/Shyama Gandhi/ECE_315_WINTER2021/Lab_4_Stepper_Motor/lab_4_v0
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11820 C:\Users\bfcoc\OneDrive\Desktop\Shyama Gandhi\ECE_315_WINTER2021\Lab_4_Stepper_Motor\lab_4_v0\lab_4_v0.xpr
+# Log file: C:/Users/bfcoc/OneDrive/Desktop/Shyama Gandhi/ECE_315_WINTER2021/Lab_4_Stepper_Motor/lab_4_v0/vivado.log
+# Journal file: C:/Users/bfcoc/OneDrive/Desktop/Shyama Gandhi/ECE_315_WINTER2021/Lab_4_Stepper_Motor/lab_4_v0\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/bfcoc/OneDrive/Desktop/Shyama Gandhi/ECE_315_WINTER2021/Lab_4_Stepper_Motor/lab_4_v0/lab_4_v0.xpr}
