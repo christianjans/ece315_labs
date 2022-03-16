@@ -62,6 +62,7 @@ XGpio BTNInst;
 //GPIO RGB led Instance and DEVICE ID
 XGpio Red_RGBInst;
 #define RGB_LED_DEVICE_ID					XPAR_PMOD_RGB_DEVICE_ID
+#define RED    7
 
 // The number of positions/delays which can be sequenced
 #define SEQUENCE_LENGTH 10
@@ -76,6 +77,10 @@ typedef struct {
 
 decision_parameters motor_parameters;
 int parameters_flag = 0;
+
+float currentSpeed = 0;
+float currentDecel = 0;
+long currentTarget = 0;
 
 int positionSequence[SEQUENCE_LENGTH][2] = {{NO_OF_STEPS_PER_REVOLUTION_FULL_DRIVE, 0}}; // position-delay array
 int sequenceIndex = 0; // the number of position-delay sequences
@@ -409,6 +414,7 @@ static void _Task_Motor( void *pvParameters ){
 
 		/**********************************************************************************************/
 		// get the motor parameters from the queue (FIFO1). The structure "decision_parameters" to store the received queue has been declared in this task for you.
+		xQueueReceive(xQueue_FIFO1, &read_motor_parameters_from_queue, portMAX_DELAY);
 
 
 		/**********************************************************************************************/
@@ -427,6 +433,20 @@ static void _Task_Motor( void *pvParameters ){
 		// Find the function from the driver code that will help to move the motor by an absolute number of target steps.! The function is mentioned in the handout as well.
 		// Once the motor reaches the desired position, disable the motor and then execute the dwell time delay using the conventional vTaskDelay().
 
+		 Stepper_setCurrentPositionInSteps(read_motor_parameters_from_queue->currentposition_in_steps);
+		 Stepper_setSpeedInStepsPerSecond(read_motor_parameters_from_queue->rotational_speed);
+		 Stepper_setAccelerationInStepsPerSecondPerSecond(read_motor_parameters_from_queue->rotational_acceleration);
+		 Stepper_setDecelerationInStepsPerSecondPerSecond(read_motor_parameters_from_queue->rotational_deceleration);
+
+		 //for position in positions
+		 for (int i=0; i<sequenceIndex; i++) {
+			 currentSpeed = read_motor_parameters_from_queue->rotational_speed;
+			 currentDecel = read_motor_parameters_from_queue->rotational_deceleration;
+			 currentTarget = positionSequence[i][0];
+			 Stepper_moveToPositionInSteps(positionSequence[i][0]);//go to position
+			 Stepper_disableMotor();
+			 vTaskDelay(pdMS_TO_TICKS(positionSequence[i][1]));//dwell
+		 }
 
 
 		/**********************************************************************************************/
@@ -451,6 +471,7 @@ static void _Task_Emerg_Stop( void *pvParameters ){
 		/**********************************************************************************************/
 		//Read the Button value inside the variable "btnState"
 		//i.e., poll the button
+		btnState = XGpio_DiscreteRead(&BTNInst, 1);
 
 
 		/**********************************************************************************************/
@@ -468,6 +489,26 @@ static void _Task_Emerg_Stop( void *pvParameters ){
 			//Cancel the rest of the destination position-delay pairs.
 			//Inside an infinite loop, flash the Red light on RGB led at 2Hz.
 			//The Object Instance for RGB led is "Red_RGBInst".
+
+			Stepper_setCurrentPositionInSteps(currentTarget - (0.5*(currentSpeed*currentSpeed/currentDecel)));
+
+			//show that deceleration works immediately after pressing button
+//			xil_printf("\nTRIGGERED\n");
+//			while(1) {
+//				xil_printf("%d\n", (int) Stepper_getCurrentVelocityInStepsPerSecond());
+//				vTaskDelay(pdMS_TO_TICKS(100));
+//
+//				if (Stepper_getCurrentVelocityInStepsPerSecond() < 10) {break;}
+//			}
+
+			while (1) {
+				XGpio_DiscreteWrite(&Red_RGBInst, 1, RED); //led on
+				vTaskDelay(pdMS_TO_TICKS(250));
+				XGpio_DiscreteWrite(&Red_RGBInst, 1, 0); //led off
+				vTaskDelay(pdMS_TO_TICKS(250));
+			}
+
+
 
 
 
