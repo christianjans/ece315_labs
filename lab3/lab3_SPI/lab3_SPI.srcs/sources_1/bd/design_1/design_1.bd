@@ -4,7 +4,7 @@
       "boundary_crc": "0xCC6CFA5306BD3ECB",
       "device": "xc7z010clg400-1",
       "name": "design_1",
-      "synth_flow_mode": "Singular",
+      "synth_flow_mode": "Hierarchical",
       "tool_version": "2019.1",
       "validated": "true"
     },
