@@ -2,10 +2,10 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Mar 29 13:24:30 2022
-# Process ID: 7716
+# Start of session at: Wed Mar 30 10:59:53 2022
+# Process ID: 4084
 # Current directory: C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2312 C:\Users\Matt\Desktop\ece315_labs\lab3\lab3_SPI\lab3_SPI.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15448 C:\Users\Matt\Desktop\ece315_labs\lab3\lab3_SPI\lab3_SPI.xpr
 # Log file: C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI/vivado.log
 # Journal file: C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI\vivado.jou
 #-----------------------------------------------------------
@@ -13,8 +13,6 @@ start_gui
 open_project C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI/lab3_SPI.xpr
 update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
 file mkdir C:/Users/Matt/Desktop/ece315_labs/lab3/lab3_SPI/lab3_SPI.sdk
