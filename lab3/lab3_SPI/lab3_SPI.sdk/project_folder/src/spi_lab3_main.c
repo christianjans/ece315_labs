@@ -182,7 +182,7 @@ static void TaskUartManager( void *pvParameters ){
       u8 dummy = DOLLAR;         // dummy char to send to the slave as a control character
       int loop_counter = str_length;   // loop count for sending the dummy char
       for(int i=0;i<loop_counter;i++){
-    	  xil_printf("UART MANAGER ACTIVATED\n");
+//    	  xil_printf("ENTERED LOOP\n");
 
         /*******************************************/
         //write the logic to send the "dummy" control character using the FIFO1
@@ -195,7 +195,9 @@ static void TaskUartManager( void *pvParameters ){
     	              &received_from_FIFO2,
     	              portMAX_DELAY );
     	  while (XUartPs_IsTransmitFull(XPAR_XUARTPS_0_BASEADDR) == TRUE){};
-    	      XUartPs_WriteReg(XPAR_XUARTPS_0_BASEADDR, XUARTPS_FIFO_OFFSET, received_from_FIFO2);
+//    	  xil_printf("PRINTING CHAR\n");
+    	  XUartPs_WriteReg(XPAR_XUARTPS_0_BASEADDR, XUARTPS_FIFO_OFFSET, received_from_FIFO2);
+
 
 
 
@@ -269,16 +271,17 @@ static void TaskSpi0Master( void *pvParameters ){
       //You can use the write function for MasterSPI (from the driver file) for that and then you want to use taskYIELD() that allows the slave SPI task to work.
       //Finally, you want to use the read from master implementation using the function from the driver file provided. Then send the data to the back of the FIFO2 and reset the "bytecount" variable to zero.
       
-      send_buffer[0] = task2_receive_from_FIFO1;
+      send_buffer[bytecount] = task2_receive_from_FIFO1;
       bytecount++;
 
       if(bytecount==TRANSFER_SIZE_IN_BYTES){
-
-    	  SpiMasterWrite(&send_buffer[0], bytecount);
+    	  SpiMasterWrite(send_buffer, bytecount);
     	  taskYIELD();
-    	  send_SPI_data_via_FIFO2 = SpiMasterRead(1);
-    	  xQueueSendToBack(xQueue_FIFO2, &send_SPI_data_via_FIFO2, 0UL);
-    	  bytecount=0;
+
+		  send_SPI_data_via_FIFO2 = SpiMasterRead(TRANSFER_SIZE_IN_BYTES);
+		  xQueueSendToBack(xQueue_FIFO2, &send_SPI_data_via_FIFO2, 0UL);
+
+		  bytecount = 0;
       }
       /*******************************************/
 
@@ -310,34 +313,78 @@ static void TaskSpi1Slave( void *pvParameters ){
 
     if(spi_master_loopback_en==0 && current_command_execution_flag==2){
 
+
+    	SpiSlaveRead(TRANSFER_SIZE_IN_BYTES);
+
+    	// detecting the end sequence
+		if(*RxBuffer_Slave == CHAR_CARRIAGE_RETURN && end_sequence_flag==2){
+			end_sequence_flag +=1;
+		}
+		else if(*RxBuffer_Slave == CHAR_POUND_HASH && end_sequence_flag==1){
+			end_sequence_flag +=1;
+		}
+		else if(*RxBuffer_Slave == CHAR_CARRIAGE_RETURN && end_sequence_flag==0){
+			end_sequence_flag +=1;
+		}
+		else{
+			num_received ++; // counting the numbers of non-control characters
+			end_sequence_flag=0;
+		}
+		buffer_Rx_Master = RxBuffer_Slave;
+		SpiSlaveWrite(buffer_Rx_Master, TRANSFER_SIZE_IN_BYTES);
+
+		if (end_sequence_flag == 3) {
+			flag = 1;
+			sprintf(buffer, "The number of characters received over SPI: %d\n", num_received);
+			str_length = strlen(buffer);
+			for (int i = 0; i < str_length; i++) {
+				SpiSlaveRead(TRANSFER_SIZE_IN_BYTES);
+				temp_store = buffer[i];
+				SpiSlaveWrite(&temp_store, TRANSFER_SIZE_IN_BYTES);
+			}
+			SpiSlaveRead(TRANSFER_SIZE_IN_BYTES);
+			end_sequence_flag = 0;
+			num_received = 0;
+			flag = 0;
+		}
+
+
+
     	//xil_printf("SLAVE ACTIVATED\n");
 
     	//echo all characters that were sent
 
     	//print termination statement about how many characters were received
 
-    	  SpiSlaveRead(1);
-		  u8 received = RxBuffer_Slave[0];
-		  num_received++;
-		  SpiSlaveWrite(&received, 1);
-
-		  if (end_sequence_flag == 2 && received == CHAR_CARRIAGE_RETURN) {
-			  sprintf(buffer, "The number of characters received over SPI: %d\n", num_received);
-			for (int i = 0; i < 48; i++) {
-				temp_store = buffer[i];
-			    SpiSlaveWrite(&temp_store, 1);
-			}
-			flag = 1;
-		    str_length = num_received;
-		    num_received = 0;
-			end_sequence_flag = 0;
-		  } else if (end_sequence_flag == 1 && received == CHAR_POUND_HASH) {
-			end_sequence_flag++;
-		  } else if (end_sequence_flag == 0 && received == CHAR_CARRIAGE_RETURN) {
-			end_sequence_flag++;
-		  } else {
-			end_sequence_flag = 0;
-		  }
+//    	  SpiSlaveRead(1);
+//		  u8 received = RxBuffer_Slave[0];
+//
+//		  SpiSlaveWrite(&received, 1);
+//
+//		  if (end_sequence_flag == 2 && received == CHAR_CARRIAGE_RETURN) {
+//			  sprintf(buffer, "The number of characters received over SPI: %d\n", num_received-3);
+//			for (int i = 0; i < 48; i++) {
+//				temp_store = buffer[i];
+////				bytecount+=1;
+//			    SpiSlaveWrite(&temp_store, 1);
+//
+//			}
+////			current_command_execution_flag = 0;
+////			spi_master_loopback_en = 1;
+//
+//			flag = 1;
+//		    str_length = num_received;
+//		    num_received = 0;
+//			end_sequence_flag = 0;
+//
+//			executeTerminationSequence();
+//		  } else if (end_sequence_flag == 1 && received == CHAR_POUND_HASH) {
+//			end_sequence_flag++;
+//		  } else if (end_sequence_flag == 0 && received == CHAR_CARRIAGE_RETURN) {
+//			end_sequence_flag++;
+//		  } else {
+//			end_sequence_flag = 0;
+//		  }
 
 
 
